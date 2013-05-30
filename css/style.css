@@ -1,0 +1,12 @@
+body {
+    background-image: url("/images/back.png");
+    font-family: "Gothan Rounded Bold";
+    padding-top: 20px;
+    text-transform: uppercase;
+    background-color: #FFFFFF;
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+}
