@@ -29,6 +29,10 @@ hr {
 	width: 100%;
 }
 
+.quotation .button-area input {
+	width: 60%;
+}
+
 .quotation .content {
 	margin-top: 20px;
 }
@@ -54,6 +58,19 @@ hr {
 
 .quotation .items{
   margin-top: 25px;
+  text-align: left;
+}
+
+.quotation .content .items input{
+  text-align: left;
+}
+
+.quotation table th.large {
+	width: 60%;
+}
+
+input[type='email'].email {
+	width: 60%;
 }
 
 
@@ -76,6 +93,11 @@ hr {
 	text-align: left;
 }
 
+.quotation .content .conditions input, .quotation .content .website input, .quotation .content table td.large input{
+	width: 600px;
+	color: grey;
+	font-size: 0.8em;
+}
 
 .quotation .conditions ol {
 	margin-top: 10px;
