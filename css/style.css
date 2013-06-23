@@ -30,7 +30,7 @@ hr {
 }
 
 .quotation .button-area input {
-	width: 60%;
+	width: 50%;
 }
 
 .quotation .content {
@@ -102,4 +102,12 @@ input[type='email'].email {
 .quotation .conditions ol {
 	margin-top: 10px;
 	margin-bottom: 25px;
+}
+
+.tryit{
+	margin-left: -3px;
+}
+
+.old-quotation-text{
+	width: 250px;
 }

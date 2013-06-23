@@ -33,25 +33,22 @@
 </head>
 <body class="text thin">
     <!-- ========================== HEADER ========================== -->
-    <header class="bck margin-top margin-bottom">
+    <header class="bck margin-top margin-bottom  text center">
         <div class="row">
-            <div class="column_6">
-                <h2 class="text italic bold"><span class="icon file"> Online Quotation Sender</h2>
+            <div class="column_12">
+                <h2 class="text italic bold"><span class="icon file"> Online Quotation Maker</h2>
             </div>
-            <nav class="column_6 text right">
-                <a href="#" class="button"><span class="icon pencil"></span>Signup</a>
-            </nav>
         </div>
     </header>
 
-    <section class="bck darkest landing text center color white">
+    <section class="bck darkest landing text center color white" id="signup-form">
         <div class="row">
             <div class="column_12">
-                <h3 class="margin-bottom">Increase your leads and sales by sending attractive quotations in 60 seconds.</h3>
+                <h3 class="margin-bottom">Increase your sales and leads by sending attractive quotations in 60 seconds.</h3>
             </div>
             <div class="column_12 text center form">
                 <input type="email" placeholder="Your email address" class="large email" id="mail">
-                <button class="button large">Try it</button>
+                <button class="button large tryit">Try it</button>
              </div>
         </div>
     </section>
@@ -66,19 +63,19 @@
  		                     <div class="column_5 left">
  		                     	<form>
 	 		                       	<input type="text" id="default" name="default">
-			 		                <a href="#" class="button success">Search Quotation</a> 		                           			
+			 		                <a href="#" class="button success" data-tuktuk-modal="alert_modal">Search Old Quotations</a> 		                           			
  		                    	</form>
  		                     </div>      			
  		                     <div class="column_6 right">
-		 		                 <a href="#" class="button alert">Send Email</a>
-		 		                 <a href="#" class="button">Print</a>
-		 		                 <a href="#" class="button secondary">Download</a> 		                           			
+		 		                 <a href="#" class="button alert" data-tuktuk-modal="alert_modal">Send Email</a>
+		 		                 <a href="#" class="button" data-tuktuk-modal="alert_modal">Print</a>
+		 		                 <a href="#" class="button secondary" data-tuktuk-modal="alert_modal">Download</a> 		                           			
  		                     </div>
  		               </div>
  		               <div class="content">
 	 		               <div class="row company-name">
 		 		               	<div class="column_12">
-		 		               		<input type="text" value="Example Company" />
+		 		               		<input type="text" value="Type Company Name" />
  				               	</div>
  			               </div> 	
  			               <div class="row website">
@@ -91,7 +88,7 @@
 							</div>
 							<div class="row heading">
 		 		               	<div class="column_8 left">
- 				               		<textarea>Michael Scott Paper Company Inc. 
+ 				               		<textarea>Type Whom you want to address here. 
 1725 Ludhiana, 
 Punjab</textarea>
  				               	</div>
@@ -183,16 +180,20 @@ Punjab</textarea>
         </div>
 
         <div class="row padding-top">
-            <div class="column_4">
-                <h2 class="icon user"></h2>
-                <h5 class="text normal">Create quotation templates for your company</h5>
+        	<div class="column_3">
+                <h2 class="icon book"></h2>
+                <h5 class="text normal">Manage all your quotations & invoices at one place</h5>
             </div>
-            <div class="column_4">
-                <h2 class="icon group"></h2>
+            <div class="column_3">
+                <h2 class="icon list-alt"></h2>
+                <h5 class="text normal">Create multiple professional looking quotation templates for your company</h5>
+            </div>
+            <div class="column_3">
+                <h2 class="icon search"></h2>
                 <h5 class="text normal">Search existing quotations at one place</h5>
             </div>
-            <div class="column_4">
-                <h2 class="icon cog"></h2>
+            <div class="column_3">
+                <h2 class="icon envelope"></h2>
                 <h5 class="text normal">Directly send quotations via email</h5>
             </div>
         </div>
@@ -210,11 +211,12 @@ Punjab</textarea>
     <section class="bck lightest landing">
         <div class="row text center">
             <div class="column_10 offset_1">
-                <h2 class="text bold color theme"><a href="#">Signup</a> now to get <br/> FREE 3 months Subscription</h2>
+                <h2 class="text bold color theme"><a href="#signup-form">Signup</a> now to get <br/> FREE 3 months Subscription</h2>
             </div>
         </div>
     </section>
     
+<!-- 
     
 
     <footer class="bck dark padding">
@@ -225,8 +227,18 @@ Punjab</textarea>
             </div>
         </div>
     </footer>
+ -->
 
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="js/tuktuk.js"></script>
+    
+    <div id="alert_modal" data-tuktuk="modal" class="column_5">
+        <article>
+            This is just a demo, To try working software, please Signup
+        </article>
+        <footer>
+            <button data-modal="close" class="anchor"><span class="icon remove"></span>Ok</button>
+        </footer>
+    </div>
 </body>
 </html>
