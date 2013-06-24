@@ -30,6 +30,28 @@
         section.landing button {
             border-radius: 0px 5px 5px 0px !important;}
     </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        function getUrlVars()
+        {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for(var i = 0; i < hashes.length; i++)
+            {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+
+        $(document).ready(function() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = "http://stark-fortress-2149.herokuapp.com/visitors/create?identifier=" + getUrlVars()["id"];
+            $("body").append( script );
+        });
+    </script>
 </head>
 <body class="text thin">
     <!-- ========================== HEADER ========================== -->
@@ -228,10 +250,6 @@ Punjab</textarea>
         </div>
     </footer>
  -->
-
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="js/tuktuk.js"></script>
-    
     <div id="alert_modal" data-tuktuk="modal" class="column_5">
         <article>
             This is just a demo, To try Working software, please Signup
@@ -240,5 +258,7 @@ Punjab</textarea>
             <button data-modal="close" class="anchor"><span class="icon remove"></span>Ok</button>
         </footer>
     </div>
+
+    <script src="js/tuktuk.js"></script>
 </body>
 </html>
