@@ -30,7 +30,7 @@
         section.landing button {
             border-radius: 0px 5px 5px 0px !important;}
     </style>
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script type="text/javascript">
         function getUrlVars()
         {
@@ -46,10 +46,12 @@
         }
 
         $(document).ready(function() {
+            var url = "http://localhost:3000/visitors/";
             var script = document.createElement('script');
             script.type = 'text/javascript';
-            script.src = "http://stark-fortress-2149.herokuapp.com/visitors/create?identifier=" + getUrlVars()["id"];
+            script.src = url + "create?identifier=" + getUrlVars()["id"];
             $("body").append( script );
+            $("#email_id_form").attr("action", url + "signup?identifier=" + getUrlVars()["id"]);
         });
     </script>
 </head>
@@ -69,8 +71,10 @@
                 <h3 class="margin-bottom">Increase your sales and leads by sending attractive quotations in seconds.</h3>
             </div>
             <div class="column_12 text center form">
-                <input type="email" placeholder="Your email address" class="large email" id="mail">
-                <button class="button large tryit">Try it</button>
+                <form method="post" id="email_id_form">
+                    <input type="email" placeholder="Your email address" class="large email" id="mail" name="email">
+                    <button class="button large tryit">Try it</button>
+                </form>
              </div>
         </div>
     </section>
