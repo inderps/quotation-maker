@@ -47,6 +47,9 @@
 
         $(document).ready(function() {
             var url = "http://localhost:3000/visitors/";
+            if(window.location.hostname == "localhost") {
+                url = "http://localhost:3000/visitors/";
+            }
             var script = document.createElement('script');
             script.type = 'text/javascript';
             script.src = url + "create?identifier=" + getUrlVars()["id"];
