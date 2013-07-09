@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript" src="sha1.js"></script>
+        <script type="text/javascript" src="codebird.js"></script>
+        <script type="text/javascript" src="jquery.min.js"></script>
+
+        <script type="text/javascript">
+            var cb = new Codebird;
+            cb.setConsumerKey("tE0p1cr0BGQejxF70xnAA", "HXw6dZL7avOsDNy7BcFb6iRuDc4IsuPKfPZEbAn8M");
+            cb.setToken("88682003-4kGAPNKR0XjLYIgiRSBibTwXC9oFyb8SvarpURmlc", "AEKU702cQMUGE0tjBFOtPKHO274nbBo5jhEQgRffOY");
+            cb.__call(
+                    "search_tweets",
+                    "q=Twitter",
+                    function (reply) {
+                        $("body").append(reply.statuses[0].text);
+                    }
+            );
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
