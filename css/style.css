@@ -115,3 +115,12 @@ input[type='email'].email {
 .free{
     color: green;
 }
+
+.free-in-heading{
+    margin-top: 20px;
+    color: yellow;
+}
+
+body section.landing{
+    padding-bottom: 25px;
+}
