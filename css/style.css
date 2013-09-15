@@ -38,9 +38,9 @@ hr {
 }
 
 .quotation .content input[type=text], textarea {
-	background: none repeat scroll 0 0 #FFFCEF;
+	background: none repeat scroll 0 0 #FFFCFF;
     overflow: hidden;
-    border: 0 none;
+    /*border: 0 none;*/
     font-family: inherit;
     font-size: inherit;
     margin: 0;
