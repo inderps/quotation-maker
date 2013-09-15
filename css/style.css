@@ -111,3 +111,7 @@ input[type='email'].email {
 .old-quotation-text{
 	width: 250px;
 }
+
+.free{
+    color: green;
+}
