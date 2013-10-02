@@ -16,11 +16,21 @@ hr {
     width: 100%;
 }
 
+.title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.quotation-model{
+    box-shadow: 10px 10px 5px #888888;
+}
+
 .quotation {
 	background: none repeat scroll 0 0 #FFFFFF;
     border: 0.1em solid #C4D2DF;
     color: #34495E;
-    margin-top: 20px;
+    margin: 0;
 }
 
 .quotation .button-area {
