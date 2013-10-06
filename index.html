@@ -10,6 +10,7 @@
     <!-- TUKTUK.WIDGETS -->
     <link rel="stylesheet" href="css/tuktuk.icons.css">
      <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/tipsy.css">
     <style>
         body > header .logo {
             margin-top: 8px;
@@ -45,9 +46,24 @@
             return vars;
         }
 
+
         $(document).ready(function() {
-            $("#startingTextBox").focus();
-            $("#startingTextBox").val($("#startingTextBox").val());
+            $("#startingTextBox").tipsy({gravity: 'e', trigger: 'manual'});
+            $("#startingTextBox").tipsy("show");
+
+            $("#item").tipsy({gravity: 'e', trigger: 'manual'});
+            $("#item").tipsy("show");
+
+            $("#searchbox").tipsy({gravity: 's', trigger: 'manual'});
+            $("#searchbox").tipsy("show");
+
+            $("#actions").tipsy({gravity: 's', trigger: 'manual'});
+            $("#actions").tipsy("show");
+
+            $("#terms").tipsy({gravity: 'e', trigger: 'manual'});
+            $("#terms").tipsy("show");
+//            $("#startingTextBox").focus();
+//            $("#startingTextBox").val($("#startingTextBox").val());
 
             var url = "http://stark-fortress-2149.herokuapp.com/visitors/";
             if(window.location.hostname == "localhost") {
@@ -78,7 +94,7 @@
     <div class="row">
         <div class="column_3 text center">
             <img src="http://inderps.github.io/quotation-maker/images/step1.png"/>
-            <h3>Choose a empty quotation template</h3>
+            <h3>Choose a empty Quotation template</h3>
         </div>
         <div class="column_1 text center">
             <h1 class="icon arrow-right"></h1>
@@ -110,14 +126,14 @@
 	               		<div class="row button-area">
  		                     <div class="column_5 left">
  		                     	<form>
-	 		                       	<input type="text" id="default" name="default">
+	 		                       	<input type="text" id="searchbox" name="default" original-title="Search old quotations from here">
 			 		                <a href="#" class="button success" data-tuktuk-modal="alert_modal">Search Old Quotations</a> 		                           			
  		                    	</form>
  		                     </div>      			
  		                     <div class="column_6 right">
 		 		                 <a href="#" class="button alert" data-tuktuk-modal="alert_modal">Send Email</a>
 		 		                 <a href="#" class="button" data-tuktuk-modal="alert_modal">Print</a>
-		 		                 <a href="#" class="button secondary" data-tuktuk-modal="alert_modal">Download</a> 		                           			
+		 		                 <a href="#" class="button secondary" data-tuktuk-modal="alert_modal" id="actions" original-title="Take a action on the quotation">Download</a>
  		                     </div>
  		               </div>
  		               <div class="content">
@@ -141,7 +157,7 @@
 							</div>
 							<div class="row heading">
 		 		               	<div class="column_8 left">
- 				               		<textarea id="startingTextBox">Type Whom you want to address here.
+ 				               		<textarea id="startingTextBox" original-title="Type sender's address here">Type Whom you want to address here.
 1725 Ludhiana, 
 Punjab</textarea>
  				               	</div>
@@ -170,7 +186,7 @@ Punjab</textarea>
  			               			</thead>
  			               			<tbody>
  			               				<tr>
- 			               					<td class="large"><input type="text" value="Example Item 1"/></td>
+ 			               					<td class="large"><input type="text" id="item" original-title="Type Items description here" value="Example Item 1"/></td>
  			               					<td><input type="text" value="1"/></td>
  			               					<td><input type="text" value="30,000.00"/></td>
  			               				</tr>
@@ -210,7 +226,7 @@ Punjab</textarea>
  			               	<div class="column_11">
  			               		<h5>Terms & Conditions</h5>
  			               		<ol>
- 			               			<li><input type="text" value="Cras mattis consectetur purus sit amet fermentum."/></li>
+ 			               			<li><input type="text" id="terms" original-title="Type Terms & Conditions here"  value="Cras mattis consectetur purus sit amet fermentum."/></li>
  			               			<li><input type="text" value="Donec ullamcorper nulla non metus auctor fringilla."/></li>
  			               			<li><input type="text" value="Aenean eu leo quam."/></li>
  			               			<li><input type="text" value="Maecenas sed diam eget risus varius blandit sit amet non magna."/></li>
@@ -238,7 +254,7 @@ Punjab</textarea>
             </div>
             <div class="column_12">
                 <div class="free-in-heading">
-                    <h4>It is completely FREE</h4>
+                    <h4>It is completely <b>FREE</b></h4>
                 </div>
             </div>
         </div>
@@ -302,5 +318,6 @@ Punjab</textarea>
     </div>
 
     <script src="js/tuktuk.js"></script>
+    <script src="js/jquery.tipsy.js"></script>
 </body>
 </html>

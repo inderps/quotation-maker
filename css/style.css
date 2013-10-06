@@ -144,6 +144,11 @@ input[type='email'].email {
     color: yellow;
 }
 
-body section.emailsection{
+.free-in-heading b{
+    font-weight: bold;
+}
+
+#signup-form{
     padding-bottom: 25px;
+    background-color: #000000;
 }
